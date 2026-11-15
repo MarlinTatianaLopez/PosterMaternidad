@@ -1,0 +1,493 @@
+/* ==========================================================================
+   COMPONENTS: Buttons, Cards, Tabs, Checklists, Search, Alerts
+   ========================================================================== */
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--text-inverse);
+  box-shadow: 0 4px 14px rgba(200, 125, 101, 0.35);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(200, 125, 101, 0.45);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-alt);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: var(--text-inverse);
+  box-shadow: 0 4px 14px rgba(192, 57, 43, 0.3);
+}
+
+.btn-danger:hover {
+  background-color: #A93226;
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+}
+
+/* Barra de Búsqueda Rápida de Temas */
+.search-wrapper {
+  max-width: 650px;
+  margin: -1.75rem auto 3rem;
+  position: relative;
+  z-index: 20;
+}
+
+.search-box {
+  background: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  padding: 0.6rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.search-box:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 20px rgba(200, 125, 101, 0.2);
+}
+
+.search-icon {
+  color: var(--color-primary);
+  font-size: 1.15rem;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: transparent;
+  color: var(--text-main);
+}
+
+.search-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.search-tag-btn {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.search-tag-btn:hover,
+.search-tag-btn.active {
+  background: var(--color-primary);
+  color: #FFF;
+  border-color: var(--color-primary);
+}
+
+/* Tarjetas de Blog / Contenido */
+.card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-subtle);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.card-icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.card-icon.green {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+.card-icon.amber {
+  background: #FEF3C7;
+  color: #D97706;
+}
+
+.card-icon.rose {
+  background: #FCE7F3;
+  color: #DB2777;
+}
+
+.card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.card-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.card-list.danger-list li::before {
+  content: '⚠';
+  color: var(--color-danger);
+}
+
+/* Tabs Component (Trimestres) */
+.tabs-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.tab-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.tab-btn.active {
+  background: var(--color-primary);
+  color: #FFF;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(200, 125, 101, 0.3);
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Sección de Alertas Críticas (Señales de Alarma) */
+.alert-box-urgent {
+  background: linear-gradient(135deg, #FFF5F5 0%, #FED7D7 100%);
+  border: 2px solid #FEB2B2;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.alert-pulse-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  animation: pulseDanger 2s infinite;
+}
+
+@keyframes pulseDanger {
+  0% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.5); }
+  70% { box-shadow: 0 0 0 14px rgba(192, 57, 43, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0); }
+}
+
+.alarm-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.alarm-card {
+  background: #FFF;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border-left: 5px solid var(--color-danger);
+  box-shadow: var(--shadow-subtle);
+}
+
+.alarm-card h4 {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-danger);
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Feature Showcase (Sección Recién Nacido con Imagen 2) */
+.feature-showcase {
+  background: #FFF;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-light);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+}
+
+.showcase-image {
+  height: 100%;
+  min-height: 420px;
+  position: relative;
+  background-color: var(--bg-surface-alt);
+  overflow: hidden;
+}
+
+.showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.showcase-content {
+  padding: 3rem 2.5rem;
+}
+
+/* Checklists Interactivas de Preparación */
+.checklist-container {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-card);
+  padding: 2.25rem;
+}
+
+.checklist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.progress-wrapper {
+  margin-bottom: 2rem;
+  background: var(--bg-surface-alt);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  background: var(--border-color);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+.checklist-group {
+  margin-bottom: 2rem;
+}
+
+.checklist-group-title {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.checklist-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-body);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.checklist-item:hover {
+  background: #FFF;
+  border-color: var(--color-accent);
+}
+
+.checklist-item.checked {
+  background: var(--color-secondary-light);
+  border-color: var(--color-secondary);
+}
+
+.checklist-item.checked span {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.checklist-item input[type="checkbox"] {
+  accent-color: var(--color-secondary);
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15rem;
+  cursor: pointer;
+}
+
+.checklist-item span {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--text-main);
+}
+
+/* Tarjeta Red de Apoyo */
+.support-card {
+  background: linear-gradient(135deg, #FFFDFB 0%, #F5ECE8 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+}
+
+.support-banner-quote {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  background: #FFF;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+}

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Mamá Segura | Tu bienestar y el de tu bebé comienzan con el autocuidado</title>
+  <meta name="description" content="Guía interactiva de salud materna e infantil: autocuidado durante el embarazo, preparación para el nacimiento, cuidados del recién nacido y señales de alarma.">
+  <meta name="keywords" content="embarazo, autocuidado, maternidad, recién nacido, lactancia, sueño seguro, señales de alarma, salud perinatal">
+  <meta name="author" content="Mamá Segura">
+
+  <!-- Open Graph / Meta para compartir en redes sociales -->
+  <meta property="og:title" content="Mamá Segura - Bienestar y Autocuidado Materno Infantil">
+  <meta property="og:description" content="Información educativa confiable, checklists de parto y cuidados del recién nacido.">
+  <meta property="og:image" content="./img/img1.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos Modulares (Clean Architecture) -->
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+
+  <!-- Encabezado Principal y Menú de Navegación -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#inicio" class="site-brand" aria-label="Mamá Segura - Ir al inicio">
+        <div class="brand-symbol">🌸</div>
+        <div class="brand-text">
+          <h1>Mamá Segura</h1>
+          <span>Salud & Autocuidado</span>
+        </div>
+      </a>
+
+      <!-- Botón Menú Móvil -->
+      <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        ☰
+      </button>
+
+      <!-- Menú de Navegación -->
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#embarazo-etapas">Etapas</a></li>
+          <li><a href="#guias-cuidado">Autocuidado</a></li>
+          <li><a href="#recien-nacido">Recién Nacido</a></li>
+          <li><a href="#preparacion">Preparación</a></li>
+          <li><a href="#red-apoyo">Red de Apoyo</a></li>
+        </ul>
+        <div class="header-actions">
+          <a href="#senales-alarma" class="btn btn-danger btn-sm">🚨 Señales de Alarma</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- SECCIÓN HERO -->
+    <section id="inicio" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge-tag">Guía Maternal Confiable</span>
+          <h2 class="hero-title">
+            Tu bienestar y el de tu bebé comienzan con el <span>autocuidado</span>.
+          </h2>
+          <p class="hero-subtitle">
+            Te acompañamos paso a paso durante el embarazo y las primeras semanas de vida. 
+            Información médica estructurada, listas interactivas y recomendaciones claras para tu tranquilidad.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#embarazo-etapas" class="btn btn-primary">Comenzar Exploración</a>
+            <a href="#senales-alarma" class="btn btn-secondary">🚨 Señales de Alarma</a>
+          </div>
+
+          <div class="hero-stats-banner">
+            <div class="stat-item">
+              <h4>3 Etapas</h4>
+              <p>Primer, segundo y tercer trimestre</p>
+            </div>
+            <div class="stat-item">
+              <h4>18 Ítems</h4>
+              <p>Checklist para el parto y el bebé</p>
+            </div>
+            <div class="stat-item">
+              <h4>100% Clave</h4>
+              <p>Educación médica y prevención</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen Hero (Ubicación: img/img1.jpg) -->
+        <div class="hero-image-wrapper">
+          <div class="hero-image-card">
+            <img src="./img/img1.jpg" alt="Bienestar y autocuidado de la gestante - Mamá Segura" loading="eager" width="600" height="750">
+          </div>
+          <div class="hero-floating-badge">
+            <div class="floating-icon">💖</div>
+            <div class="floating-text">
+              <p><strong>Cuidado Integral:</strong> Cada embarazo es único y merece escucha activa y apoyo cálido.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BARRA DE BÚSQUEDA RÁPIDA DE TEMAS -->
+    <section class="container" aria-label="Buscador rápido de temas">
+      <div class="search-wrapper">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="topicSearchInput" class="search-input" placeholder="Buscar un síntoma o tema: ej. náuseas, cordón, sueño, maletín, lactancia..." aria-label="Buscar tema en la guía">
+        </div>
+        <div class="search-tags">
+          <span style="font-size: 0.8rem; color: var(--text-muted); margin-right: 0.25rem;">Temas rápidos:</span>
+          <button type="button" class="search-tag-btn" data-query="">Todos</button>
+          <button type="button" class="search-tag-btn" data-query="náuseas">Náuseas</button>
+          <button type="button" class="search-tag-btn" data-query="nutrición">Nutrición</button>
+          <button type="button" class="search-tag-btn" data-query="medicamentos">Medicamentos</button>
+          <button type="button" class="search-tag-btn" data-query="sueño seguro">Sueño Seguro</button>
+          <button type="button" class="search-tag-btn" data-query="lactancia">Lactancia</button>
+          <button type="button" class="search-tag-btn" data-query="alarma">Alarma</button>
+        </div>
+        <p id="searchNoResults" class="text-center text-muted" style="display: none; margin-top: 1rem; font-size: 0.9rem;">
+          No se encontraron temas coincidentes con tu búsqueda. Intenta con otra palabra clave.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: ETAPAS DEL EMBARAZO (TRIMESTRES) -->
+    <section id="embarazo-etapas" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag secondary">Semana a Semana</span>
+          <h2>Mi Embarazo: Etapas y Transformaciones</h2>
+          <p>
+            Cada cuerpo vive el proceso de forma diferente. Conoce los cambios frecuentes y las pautas de autocuidado en cada trimestre.
+          </p>
+        </div>
+
+        <!-- Navegación de Pestañas -->
+        <div class="tabs-nav" role="tablist" aria-label="Trimestres del embarazo">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="trimestre-1" id="tab-btn-1">
+            🌸 Primer Trimestre (Sem 1-13)
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="trimestre-2" id="tab-btn-2">
+            🌱 Segundo Trimestre (Sem 14-27)
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="trimestre-3" id="tab-btn-3">
+            ✨ Tercer Trimestre (Sem 28-Parto)
+          </button>
+        </div>
+
+        <!-- Paneles de Trimestres -->
+        <div class="tab-content">
+          <!-- Trimestre 1 -->
+          <div class="tab-pane active" id="trimestre-1" role="tabpanel" aria-labelledby="tab-btn-1">
+            <div class="grid-2">
+              <div class="card">
+                <div class="card-icon-header">
+                  <div class="card-icon">🌱</div>
+                  <span class="badge-tag">Semanas 1 a 13</span>
+                </div>
+                <h3>Cambios habituales y adaptación</h3>
+                <p>
+                  Durante las primeras semanas pueden presentarse cansancio intenso, sueño repentino, náuseas matutinas o diurnas, 
+                  sensibilidad mamaria y cambios en el apetito o gusto.
+                </p>
+                <p>
+                  Algunas mujeres tienen pocos síntomas y otras experimentan más molestias; la intensidad de las molestias no indica por sí sola la evolución del embarazo.
+                </p>
+              </div>
+
+              <div class="card">
+                <div class="card-icon-header">
+                  <div class="card-icon green">✨</div>
+                  <span class="badge-tag secondary">Pautas de Cuidado</span>
+                </div>
+                <h3>Autocuidado en el 1er Trimestre</h3>
+                <ul class="card-list">
+                  <li>Prioriza descansos frecuentes y respeta los tiempos que pide tu organismo.</li>
+                  <li>Toma los suplementos recomendados (ácido fólico, hierro) según fórmula médica.</li>
+                  <li>Evita la automedicación, incluso con infusiones o productos naturales.</li>
+                  <li>Consulta de inmediato si las náuseas o vómitos te impiden tolerar agua o alimentos.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trimestre 2 -->
+          <div class="tab-pane" id="trimestre-2" role="tabpanel" aria-labelledby="tab-btn-2" hidden>
+            <div class="grid-2">
+              <div class="card">
+                <div class="card-icon-header">
+                  <div class="card-icon">🌿</div>
+                  <span class="badge-tag">Semanas 14 a 27</span>
+                </div>
+                <h3>Crecimiento y nuevos ritmos</h3>
+                <p>
+                  En esta etapa tu abdomen se hace más visible y se incrementa el peso paulatinamente. 
+                  Comenzarás a percibir los primeros movimientos fetales.
+                </p>
+                <p>
+                  Molestias comunes incluyen tensión lumbar, acidez gástrica, estreñimiento o calambres en las piernas.
+                </p>
+              </div>
+
+              <div class="card">
+                <div class="card-icon-header">
+                  <div class="card-icon green">💧</div>
+                  <span class="badge-tag secondary">Pautas de Cuidado</span>
+                </div>
+                <h3>Autocuidado en el 2do Trimestre</h3>
+                <ul class="card-list">
+                  <li>Mantén una dieta rica en fibra vegetal, frutas y cereales enteros.</li>
+                  <li>Toma agua potable distribuida en pequeñas tomas a lo largo del día.</li>
+                  <li>Realiza actividad física suave (caminar, yoga prenatal) con autorización médica.</li>
+                  <li>Asiste puntualmente a las ecografías anatómicas y analíticas de control.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trimestre 3 -->
+          <div class="tab-pane" id="trimestre-3" role="tabpanel" aria-labelledby="tab-btn-3" hidden>
+            <div class="grid-2">
+              <div class="card">
+                <div class="card-icon-header">
+                  <div class="card-icon">🌟</div>
+                  <span class="badge-tag">Semanas 28 al parto</span>
+                </div>
+                <h3>La recta final hacia el nacimiento</h3>
+                <p>
+                  El crecimiento del bebé produce presión en la pelvis, micción frecuente y mayor dificultad para hallar una postura reparadora para dormir.
+                </p>
+                <p>
+                  Es momento de organizar con anticipación los documentos, transporte de urgencias y maletín hospitalario.
+                </p>
+              </div>
+
+              <div class="card">
+                <div class="card-icon-header">
+                  <div class="card-icon green">📋</div>
+                  <span class="badge-tag secondary">Pautas de Cuidado</span>
+                </div>
+                <h3>Autocuidado en el 3er Trimestre</h3>
+                <ul class="card-list">
+                  <li>Duerme preferentemente recostada sobre tu lado izquierdo para optimizar el flujo sanguíneo.</li>
+                  <li>Reconoce el patrón de movimientos de tu bebé; no dejes pasar un día sin sentirlos.</li>
+                  <li>Aclara dudas con tu obstetra sobre cómo identificar el inicio del trabajo de parto.</li>
+                  <li>Ten listos tu carné materno y números telefónicos de tu acompañante y centro de salud.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: GUÍAS DE AUTOCUIDADO DIARIO (BLOG CARDS) -->
+    <section id="guias-cuidado" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag">Autocuidado & Bienestar</span>
+          <h2>Guías Prácticas para el Día a Día</h2>
+          <p>
+            Recomendaciones claras de nutrición, manejo de síntomas, medicamentos, salud emocional y actividad física.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Tarjeta 1: Nutrición -->
+          <article class="card searchable-item" data-keywords="nutrición alimentación comidas agua lavar frutas dieta proteína verduras suplementos">
+            <div class="card-icon-header">
+              <div class="card-icon">🥗</div>
+              <span class="badge-tag">Nutrición Segura</span>
+            </div>
+            <h3>Alimentación Saludable y Segura</h3>
+            <p>
+              No necesitas seguir dietas extremas ni comer por dos. La cantidad y calidad deben ajustarse a tu estado nutricional individual.
+            </p>
+            <ul class="card-list">
+              <li>Lava manos, frutas y verduras rigurosamente con agua potable.</li>
+              <li>Cocina completamente carnes, pescados y huevos (evita alimentos crudos).</li>
+              <li>Separa alimentos crudos de los listos para comer para evitar contaminación.</li>
+              <li>Toma agua suficiente a lo largo del día sin esperar a sentir sed.</li>
+            </ul>
+          </article>
+
+          <!-- Tarjeta 2: Síntomas Frecuentes -->
+          <article class="card searchable-item" data-keywords="síntomas náuseas vómito estreñimiento acidez digestión reflujo estómago">
+            <div class="card-icon-header">
+              <div class="card-icon green">🍋</div>
+              <span class="badge-tag secondary">Manejo Digestivo</span>
+            </div>
+            <h3>Alivio de Síntomas Comunes</h3>
+            <p>
+              Estrategias sencillas para transitar las molestias digestivas más usuales durante el proceso gestacional.
+            </p>
+            <ul class="card-list">
+              <li><strong>Náuseas:</strong> Come porciones pequeñas varias veces al día y evita ayunos largos.</li>
+              <li><strong>Estreñimiento:</strong> Incorpora fibra gradualmente (avena, legumbres, fruta) y muévete suavemente.</li>
+              <li><strong>Acidez:</strong> No te acuestes inmediatamente después de comer y modera fritos e irritantes.</li>
+              <li>Nunca consumas laxantes ni remedios caseros sin aval médico.</li>
+            </ul>
+          </article>
+
+          <!-- Tarjeta 3: Medicamentos y Sustancias -->
+          <article class="card searchable-item" data-keywords="medicamentos pastillas drogas alcohol tabaco sustancias químicos tóxicos plantas">
+            <div class="card-icon-header">
+              <div class="card-icon amber">💊</div>
+              <span class="badge-tag">Medicamentos</span>
+            </div>
+            <h3>Medicamentos y Prevención de Riesgos</h3>
+            <p>
+              Incluso productos naturales o medicamentos de venta libre deben ser verificados por un profesional de salud.
+            </p>
+            <ul class="card-list">
+              <li>Antes de tomar algo informa: nombre, dosis, semanas de gestación y alergias.</li>
+              <li>Evita 100% el alcohol, tabaco, cigarrillos electrónicos y sustancias psicoactivas.</li>
+              <li>Usa productos de limpieza o solventes únicamente en lugares muy ventilados.</li>
+              <li>Si tomaste algo sin consultar: anótalo y consulta sin culpas a tu médico.</li>
+            </ul>
+          </article>
+
+          <!-- Tarjeta 4: Actividad Física y Descanso -->
+          <article class="card searchable-item" data-keywords="ejercicio actividad física caminar natación deporte descanso pausas dormir sueño cansancio">
+            <div class="card-icon-header">
+              <div class="card-icon">🚶‍♀️</div>
+              <span class="badge-tag">Movimiento</span>
+            </div>
+            <h3>Actividad Física y Descanso</h3>
+            <p>
+              En embarazos sin complicaciones, mantenerse en movimiento moderado favorece la circulación, el ánimo y la preparación física.
+            </p>
+            <ul class="card-list">
+              <li>Caminar a paso cómodo o natación suave son alternativas muy recomendadas.</li>
+              <li>Usa calzado estable, ropa transpirable y mantente bien hidratada.</li>
+              <li>Evita ejercicios con riesgo de caídas, golpes o excesivo sobrecalentamiento.</li>
+              <li>Suspende de inmediato ante dolor de pecho, mareo, sangrado o contracciones regulares.</li>
+            </ul>
+          </article>
+
+          <!-- Tarjeta 5: Bienestar Emocional -->
+          <article class="card searchable-item" data-keywords="emocional salud mental tristeza depresión angustia llanto miedo pareja violencia ayuda protección">
+            <div class="card-icon-header">
+              <div class="card-icon rose">🤍</div>
+              <span class="badge-tag">Salud Mental</span>
+            </div>
+            <h3>Bienestar Emocional y Red Segura</h3>
+            <p>
+              Es natural experimentar alegría, dudas o inquietud. Pedir ayuda y expresarse libremente es fundamental para tu salud.
+            </p>
+            <ul class="card-list">
+              <li>Habla abiertamente con alguien de confianza sobre lo que estás sintiendo.</li>
+              <li>Solicita acompañamiento si la tristeza, angustia o desgano persisten por días.</li>
+              <li>No enfrentes situaciones de violencia sola: acude al centro de salud o líneas púrpura locales.</li>
+              <li>Ten a la mano un teléfono seguro y un contacto que te brinde protección incondicional.</li>
+            </ul>
+          </article>
+
+          <!-- Tarjeta 6: Salud Bucal e Higiene -->
+          <article class="card searchable-item" data-keywords="dientes encías odontología boca infecciones lavado manos higiene bacterias">
+            <div class="card-icon-header">
+              <div class="card-icon green">🪥</div>
+              <span class="badge-tag secondary">Prevención</span>
+            </div>
+            <h3>Salud Oral e Infecciones</h3>
+            <p>
+              Las encías son especialmente vulnerables al sangrado y bacterias por los cambios hormonales. La visita dental es segura.
+            </p>
+            <ul class="card-list">
+              <li>Cepíllate los dientes tras cada comida con pasta fluorada e hilo dental.</li>
+              <li>Informa a tu dentista que estás embarazada para adaptar los cuidados.</li>
+              <li>Lava tus manos con agua y jabón antes de comer y tras ir al baño.</li>
+              <li>Consulta de inmediato ante inflamación facial, fiebre o dolor dental agudo.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: SEÑALES DE ALARMA CRÍTICAS (ACCESO RÁPIDO) -->
+    <section id="senales-alarma" class="section-padding">
+      <div class="container">
+        <div class="alert-box-urgent" role="alert" aria-live="assertive">
+          <div class="alert-header">
+            <div class="alert-pulse-icon" aria-hidden="true">🚨</div>
+            <div>
+              <span class="badge-tag danger">Urgencia Médica</span>
+              <h2 style="color: var(--color-danger); margin-top: 0.25rem;">
+                Señales de Alarma: ¿Cuándo Acudir de Inmediato?
+              </h2>
+              <p style="color: var(--text-main); margin: 0; font-size: 0.95rem;">
+                Si detectas alguna de estas señales en ti o en tu recién nacido, no esperes a tu siguiente cita ni intentes remedios caseros. 
+                Acude al servicio de urgencias más cercano.
+              </p>
+            </div>
+          </div>
+
+          <div class="alarm-cards-grid">
+            <!-- Señales en la Gestante -->
+            <div class="alarm-card searchable-item" data-keywords="alarma urgencia sangrado líquido dolor cabeza visión borrosa fiebre movimientos bebé contracciones">
+              <h4><span>⚠️</span> Durante el Embarazo</h4>
+              <ul class="card-list danger-list">
+                <li>Sangrado por la vagina, sin importar la cantidad.</li>
+                <li>Salida repentina de líquido por la vagina (líquido amniótico).</li>
+                <li>Dolor de cabeza intenso que no cede, visión borrosa o zumbido en oídos.</li>
+                <li>Hinchazón repentina y marcada en cara, manos o piernas.</li>
+                <li>Fiebre persistente igual o mayor a 38 °C.</li>
+                <li>Disminución marcada o ausencia de movimientos del bebé.</li>
+                <li>Contracciones frecuentes y dolorosas antes de tiempo.</li>
+                <li>Dolor fuerte y continuo en la boca del estómago o abdomen.</li>
+              </ul>
+            </div>
+
+            <!-- Señales en el Recién Nacido -->
+            <div class="alarm-card searchable-item" data-keywords="alarma recién nacido respirar bebé azul somnoliento vomito fiebre cordón ombligo amarillo convulsiones">
+              <h4><span>⚠️</span> En el Recién Nacido</h4>
+              <ul class="card-list danger-list">
+                <li>Dificultad evidente para respirar, quejido respiratorio o hundimiento de costillas.</li>
+                <li>Coloración azulada o grisácea en labios, rostro o uñas.</li>
+                <li>Somnolencia extrema: cuesta despertarlo y no reacciona al estímulo habitual.</li>
+                <li>Rechaza repetidamente el pecho/leche o presenta vómito con bilis (verde) o sangre.</li>
+                <li>Fiebre mayor a 38 °C o temperatura corporal menor a 35.5 °C.</li>
+                <li>Ombligo enrojecido, inflamado, con mal olor o secreción con pus.</li>
+                <li>Color amarillo intenso en la piel que avanza con rapidez.</li>
+                <li>Movimientos anormales repetitivos o convulsiones.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Información útil para llevar -->
+          <div style="background: #FFF; border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-top: 1.5rem; border: 1px solid var(--border-light);">
+            <h4 style="font-size: 1rem; color: var(--text-main); margin-bottom: 0.5rem;">
+              📋 Qué información tener lista al llegar al servicio médico:
+            </h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+              • Edad del bebé o semanas de embarazo • Hora en que inició el síntoma • Temperatura registrada • Carné materno/infantil • Medicamentos recibidos • Última toma de alimento y pañales observados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: PRIMEROS CUIDADOS DEL RECIÉN NACIDO (FEATURE CON IMAGEN 2) -->
+    <section id="recien-nacido" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag secondary">Primeras Semanas</span>
+          <h2>Primeros Cuidados del Recién Nacido</h2>
+          <p>
+            Pautas esenciales de calor, higiene, lactancia respetuosa y prevención de accidentes en el hogar.
+          </p>
+        </div>
+
+        <div class="feature-showcase">
+          <!-- Imagen Destacada Recién Nacido (Ubicación: img/img2.jpg) -->
+          <div class="showcase-image">
+            <img src="./img/img2.jpg" alt="Cuidados del recién nacido y primeros días de vida" loading="lazy" width="600" height="600">
+          </div>
+
+          <div class="showcase-content">
+            <span class="badge-tag">Cuidado Seguro</span>
+            <h3 style="margin-top: 0.75rem; margin-bottom: 1rem;">
+              Amor, Higiene y Protección Diaria
+            </h3>
+            <p class="text-muted" style="margin-bottom: 1.5rem;">
+              Durante los primeros días, el bebé necesita calor confortable, alimentación a libre demanda, higiene cuidadosa y contacto afectivo constante.
+            </p>
+
+            <div class="grid-2" style="gap: 1.2rem;">
+              <div>
+                <h4 style="font-size: 1.05rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem;">
+                  <span>🌿</span> Cordón Umbilical
+                </h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin: 0;">
+                  Mantener limpio y seco. No aplicar alcohol ni remedios caseros. Doblar el pañal por debajo del ombligo.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size: 1.05rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem;">
+                  <span>🛁</span> El Baño Seguro
+                </h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin: 0;">
+                  Verificar agua tibia antes de ingresar al bebé. Preparar todo con antelación y NUNCA dejarlo solo.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size: 1.05rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem;">
+                  <span>🤱</span> Lactancia con Apoyo
+                </h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin: 0;">
+                  Aprender juntos la postura y el agarre. No tienes que soportar dolor en soledad; pide asesoría oportuna.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size: 1.05rem; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem;">
+                  <span>🌙</span> Sueño Seguro
+                </h4>
+                <p style="font-size: 0.86rem; color: var(--text-muted); margin: 0;">
+                  Siempre boca arriba, en su propia cuna con colchón firme. Cuna vacía: sin almohadas ni cobijas sueltas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: PREPARACIÓN PARA EL NACIMIENTO (CHECKLIST INTERACTIVA) -->
+    <section id="preparacion" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag">Organización & Logística</span>
+          <h2>Listas de Preparación para el Parto</h2>
+          <p>
+            Lleva el control de los elementos de la madre, el recién nacido y la logística familiar. Tus selecciones se guardan automáticamente.
+          </p>
+        </div>
+
+        <div class="checklist-container">
+          <div class="checklist-header">
+            <div>
+              <h3 style="margin-bottom: 0.25rem;">Tu Progreso de Preparación</h3>
+              <p class="text-muted" style="font-size: 0.88rem; margin: 0;">
+                Marca cada elemento a medida que lo tengas listo en casa o en tu bolso.
+              </p>
+            </div>
+            <button id="checklistResetBtn" class="btn btn-secondary btn-sm" title="Reiniciar todas las casillas">
+              🔄 Reiniciar Lista
+            </button>
+          </div>
+
+          <!-- Barra de Progreso Dinámica -->
+          <div class="progress-wrapper">
+            <div class="progress-labels">
+              <span>Elementos preparados</span>
+              <span id="checklistProgressText">0 de 18 preparados (0%)</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              <div id="checklistProgressFill" class="progress-fill"></div>
+            </div>
+          </div>
+
+          <!-- Contenido Inyectado Dinámicamente por checklistComponent.js -->
+          <div id="checklistContent">
+            <!-- Fallback accesible si JS estuviera deshabilitado -->
+            <noscript>
+              <div class="checklist-group">
+                <h4 class="checklist-group-title">Maletín de la Madre</h4>
+                <p>• Documentos de identidad • Carné prenatal • Ropa cómoda • Higiene personal</p>
+              </div>
+            </noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: RED DE APOYO Y CONTACTOS -->
+    <section id="red-apoyo" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag secondary">Comunidad & Familia</span>
+          <h2>Mi Red de Apoyo Seguro</h2>
+          <p>
+            El acompañamiento respetuoso y oportuno marca una diferencia invaluable en el bienestar materno.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Mensaje a la fuente de apoyo -->
+          <div class="support-card">
+            <div class="support-banner-quote">
+              <p style="margin: 0; font-weight: 500;">
+                “Acompañar no significa decidir por la gestante. Significa escucharla, respetar sus decisiones, ayudarla a cumplir sus controles prenatales, evitar comentarios que generen miedo y buscar atención inmediata cuando ella lo solicite.”
+              </p>
+            </div>
+
+            <h4 style="font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.75rem;">
+              Roles Clave en la Red de Acompañamiento:
+            </h4>
+            <ul class="card-list">
+              <li><strong>Persona de Confianza:</strong> Escucha activa y contención emocional sin juzgar.</li>
+              <li><strong>Acompañante para Controles:</strong> Asistencia en citas médicas y toma de notas.</li>
+              <li><strong>Transporte de Reserva:</strong> Vehículo o conductor disponible ante el inicio de parto.</li>
+              <li><strong>Apoyo en el Hogar:</strong> Ayuda práctica con comidas, descanso y otros hijos.</li>
+            </ul>
+          </div>
+
+          <!-- Directorio Rápido de Emergencias -->
+          <div class="card" style="justify-content: center;">
+            <div class="card-icon-header">
+              <div class="card-icon amber">📞</div>
+              <span class="badge-tag">Directorio Rápido</span>
+            </div>
+            <h3>Contactos Siempre a Mano</h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+              Asegúrate de tener estos números registrados en el teléfono de la madre y del acompañante:
+            </p>
+
+            <div style="background: var(--bg-body); border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 0.85rem; border: 1px solid var(--border-light);">
+              <strong style="color: var(--text-main); font-size: 0.92rem;">🏥 Centro de Salud / EPS</strong>
+            </div>
+
+            <div style="background: var(--bg-body); border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 0.85rem; border: 1px solid var(--border-light);">
+              <strong style="color: var(--text-main); font-size: 0.92rem;">🚑 Línea de Urgencias Nacional:</strong>
+              <p style="margin: 0; font-size: 0.85rem; color: var(--color-danger); font-weight: 700;">123 / Número de Emergencias Local</p>
+            </div>
+
+            <div style="background: var(--bg-body); border-radius: var(--radius-sm); padding: 1rem 1.25rem; border: 1px solid var(--border-light);">
+              <strong style="color: var(--text-main); font-size: 0.92rem;">💜 Línea de Orientación y Protección:</strong>
+              <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Líneas de apoyo a la mujer y violencia de género</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA (FOOTER) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;">
+            <span style="font-size: 1.6rem;">🌸</span>
+            <h3 style="color: #FFF; font-size: 1.35rem; margin: 0;">Mamá Segura</h3>
+          </div>
+          <p>
+            Plataforma educativa para el bienestar, salud y autocuidado de madres gestantes y sus bebés. 
+            Información basada en guías clínicas de cuidado perinatal.
+          </p>
+          
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación Rápida</h4>
+          <ul class="footer-links">
+            <li><a href="#embarazo-etapas">Trimestres del Embarazo</a></li>
+            <li><a href="#guias-cuidado">Guías de Nutrición y Autocuidado</a></li>
+            <li><a href="#recien-nacido">Cuidados del Recién Nacido</a></li>
+            <li><a href="#preparacion">Checklists de Preparación</a></li>
+            <li><a href="#red-apoyo">Red de Apoyo Familiar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Recursos Clave</h4>
+          <ul class="footer-links">
+            <li><a href="#senales-alarma">🚨 Señales de Alarma</a></li>
+            <li><a href="#guias-cuidado">Manejo de Náuseas y Síntomas</a></li>
+            <li><a href="#recien-nacido">Reglas de Sueño Seguro</a></li>
+            <li><a href="#recien-nacido">Cuidado del Cordón Umbilical</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Aviso Legal & Seguridad</h4>
+          <div class="footer-disclaimer-card">
+            <p style="margin: 0;">
+              Esta página no realiza diagnósticos, no interpreta análisis ni prescribe medicamentos. La información debe adaptarse a cada paciente por su médico tratante. En caso de emergencia, acude inmediatamente a un hospital.
+            </p>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <!-- Script Principal Modular (ES6 Modules) -->
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>

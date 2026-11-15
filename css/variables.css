@@ -1,0 +1,64 @@
+/* ==========================================================================
+   CSS VARIABLES & DESIGN TOKENS
+   Inspirado en la plantilla "Consultoría de Bebés (Suave)" - Wix Wellness
+   ========================================================================== */
+
+:root {
+  /* Paleta cromática suave y acogedora */
+  --color-primary: #C87D65;        /* Terracota cálido suave */
+  --color-primary-hover: #B56A54;
+  --color-primary-light: #F7EBE8;  /* Rosa empolvado tenue */
+  --color-primary-subtle: #FDF9F7;
+
+  --color-secondary: #6E8C7A;      /* Verde salvia sereno */
+  --color-secondary-light: #EBF2EE;
+  
+  --color-accent: #E3A894;         /* Melocotón suave */
+  --color-accent-light: #FBF0EB;
+
+  /* Estados y Alertas */
+  --color-danger: #C0392B;         /* Rojo de emergencia médico */
+  --color-danger-bg: #FDF2F2;
+  --color-danger-border: #F5C6CB;
+
+  --color-warning: #D97706;        /* Ámbar de precaución */
+  --color-warning-bg: #FEF3C7;
+
+  --color-success: #2E7D32;        /* Verde confirmación */
+  --color-success-bg: #E8F5E9;
+
+  /* Fondos y Superficies */
+  --bg-body: #FAF7F2;             /* Fondo beige cremoso cálido */
+  --bg-surface: #FFFFFF;          /* Blanco puro para tarjetas */
+  --bg-surface-alt: #F4EFEA;      /* Superficie secundaria */
+  --bg-card-hover: #FFFFFF;
+
+  /* Tipografía y Textos */
+  --text-main: #2D3748;           /* Carbón suave de alta legibilidad */
+  --text-muted: #5A6A80;          /* Gris azulado atenuado */
+  --text-light: #8C9BAE;          /* Texto secundario claro */
+  --text-inverse: #FFFFFF;
+
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Bordes, Sombras y Radios */
+  --border-color: #EADFD5;
+  --border-light: #F2EBE4;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 9999px;
+
+  --shadow-subtle: 0 2px 8px rgba(133, 94, 82, 0.05);
+  --shadow-card: 0 4px 18px rgba(133, 94, 82, 0.08);
+  --shadow-hover: 0 10px 28px rgba(133, 94, 82, 0.12);
+  --shadow-dropdown: 0 12px 32px rgba(45, 55, 72, 0.12);
+
+  /* Espaciado y Dimensiones */
+  --container-max: 1200px;
+  --container-narrow: 880px;
+  --header-height: 76px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
